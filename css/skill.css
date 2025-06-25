@@ -1,0 +1,78 @@
+.screen {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #666;
+}
+.ToolTip1_red {
+  color: red;
+  font-weight: bold;
+}
+.ToolTip1_blue {
+  color: blue;
+  font-weight: bold;
+}
+.SkillToolTip_Purple {
+  color: purple;
+  font-weight: bold;
+}
+.SkillToolTip_Orange {
+  color: orange;
+  font-weight: bold;
+}
+.main-contianer {
+  max-width: 900px;
+  padding: 20px;
+  color: #fff;
+}
+.skill-contianer {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+}
+.skill-head {
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+}
+.skill-head img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+.skill-name {
+  padding-left: 10px;
+  font-weight: bold;
+}
+.skill-title {
+  background-color: #333;
+  border-radius: 5px;
+  padding: 5px;
+}
+.tag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  background-color: #666;
+  display: flex;
+  padding: 1px;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.skill-upgrade {
+  background-color: #2e7243;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.upgrade-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: rgb(41, 83, 69);
+  display: flex;
+  border-radius: 5px;
+  padding: 1px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,110 @@
+{
+  "character": {
+    "name": "rudy",
+    "type": "tank",
+    "level": 1,
+    "stats": {
+      "attack": 116,
+      "defense": 135,
+      "hp": 773,
+      "attack_speed": 19,
+      "critical_rate": 0.005,
+      "critical_damage": 1.5,
+      "weak_point_rate": 0,
+      "block_rate": 0,
+      "damage_reduction": 0,
+      "accuracy": 0,
+      "resistance": 0
+    },
+    "skills": {
+      "basic_attack": {
+        "name": "",
+        "target": {
+          "key": "Target_SingleEnemey"
+        },
+        "effect": {
+          "key": "Module_101_102",
+          "values": [0, 0, 0]
+        },
+        "upgrade_effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_2": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_6": {
+          "key": "",
+          "values": [0, 0, 0]
+        }
+      },
+      "skill_1": {
+        "name": "",
+        "target": {
+          "key": ""
+        },
+        "effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "upgrade_effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_2": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_6": {
+          "key": "",
+          "values": [0, 0, 0]
+        }
+      },
+      "skill_2": {
+        "name": "",
+        "target": {
+          "key": ""
+        },
+        "effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "upgrade_effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_2": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_6": {
+          "key": "",
+          "values": [0, 0, 0]
+        }
+      },
+      "passive": {
+        "name": "",
+        "target": {
+          "key": ""
+        },
+        "effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "upgrade_effect": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_2": {
+          "key": "",
+          "values": [0, 0, 0]
+        },
+        "limit_break_6": {
+          "key": "",
+          "values": [0, 0, 0]
+        }
+      }
+    }
+  }
+}
