@@ -1,35 +1,37 @@
-// skill.js
-fetch("../../json/skill-th.json")
-  .then((res) => res.json())
-  .then((data) => {
-    Object.keys(data).forEach((key) => {
+fetch("../../data/game.json")
+  .then(res => res.json())
+  .then(json => {
+    const skillData = json["PCSkillTable"];
+    if (!skillData) return;
+
+    Object.keys(skillData).forEach((key) => {
       const el = document.getElementById(key);
-      if (el && data[key] && data[key] !== "@") {
-        let text = data[key];
+      if (!el) return;
 
-        // แทนที่ {Value} และ {Percent} ตามเดิม
-        const value = el.getAttribute("data-value");
-        const percent = el.getAttribute("data-percent");
-        if (value !== null) {
-          text = text.replace(/\{Value\}/g, value);
-        }
-        if (percent !== null) {
-          text = text.replace(/\{Percent\}/g, percent);
-        }
+      let text = skillData[key];
 
-        // แทนที่ {0}, {1}, {2} ด้วย data-0, data-1, data-2
-        for (let i = 0; i <= 2; i++) {
-          const attrValue = el.getAttribute(`data-${i}`);
-          if (attrValue !== null) {
-            const regex = new RegExp(`\\{${i}\\}`, "g");
-            text = text.replace(regex, attrValue);
-          }
-        }
+      // ✅ ซ่อมแท็กที่ใช้ </> ให้เป็น </text> (สำหรับคนขี้ลืม)
+      text = text.replace(/<\/>/g, '</text>');
 
-        el.innerHTML = text;
+      // ✅ แทนที่ {0} ถึง {9}
+      for (let i = 0; i <= 9; i++) {
+        const attr = el.getAttribute(`data-${i}`);
+        if (attr !== null) {
+          const regex = new RegExp(`\\{${i}\\}`, "g");
+          text = text.replace(regex, attr);
+        }
       }
+
+      // ✅ แทนที่ {Value}, {Percent}
+      const val = el.getAttribute("data-Value");
+      if (val !== null) text = text.replace(/\{Value\}/g, val);
+
+      const percent = el.getAttribute("data-percent");
+      if (percent !== null) text = text.replace(/\{Percent\}/g, percent);
+
+      el.innerHTML = text;
     });
-  })
-  .catch((err) => {
-    console.error("โหลด JSON ไม่ได้:", err);
   });
+
+
+
